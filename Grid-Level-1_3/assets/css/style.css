@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color_orange: #f57c51;
+  --color_yellow: #fcbc58;
+  --color_creme: #f6f8e2;
+  --creme_darker: #e0ddca;
+}
+
+.main_wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vh 80vh 10vh;
+}
+
+.box1 {
+  grid-row: 1/1;
+  grid-column: 1/4;
+  background-color: var(--color_orange);
+}
+
+.box2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: var(--color_yellow);
+}
+
+.box3 {
+  grid-row: 2/3;
+  grid-column: 2/4;
+  background-color: var(--color_creme);
+}
+
+.box4 {
+  grid-row: 3/3;
+  grid-column: 1/4;
+  background-color: var(--color_darker);
+}

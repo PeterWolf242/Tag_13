@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color_black: #000000;
+  --color_white: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #ede0d4;
+}
+
+.grid_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(4, 30rem);
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid_wrapper > * {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid_wrapper > *::before {
+  position: absolute;
+  content: '';
+  transform: translateY(100%);
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  transition: 0.4s transform ease-in-out;
+}
+
+.grid_wrapper > *:hover::before {
+  transform: translateY(0);
+}
+
+.item1 {
+  background: url('../img/sunset_1.webp');
+}
+
+.item2 {
+  background: url('../img/Photo-by-M-Schoenberger-5089Bkl.webp');
+}
+
+.item3 {
+  background: url('../img/sunset_2.webp');
+}
+
+.item4 {
+  background: url('../img/sunset_3.webp');
+}
+
+.item5 {
+  background: url('../img/playing_wolves.webp');
+}
+
+.item6 {
+  background: url('../img/waterfall_1.webp');
+}
+
+.item7 {
+  background: url('../img/sunset_4.webp');
+}
+
+.item8 {
+  background: url('../img/waterfall_2.webp');
+}
+
+.item9 {
+  background: url('../img/sunset_5.webp');
+}
+
+.item10 {
+  background: url('../img/playing_wolves.webp');
+}
+
+.item11 {
+  background: url('../img/sunset_6.webp');
+}
+
+.item12 {
+  background: url('../img/Photo-by-M-Schoenberger-5089Bkl.webp');
+}
