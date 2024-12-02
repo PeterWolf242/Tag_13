@@ -20,31 +20,49 @@ body {
 .grid_wrapper {
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
-  grid-template-rows: repeat(4, 30rem);
+  grid-template-rows: repeat(4, 32rem);
   gap: 10px;
   padding: 10px;
 }
 
-.grid_wrapper > * {
+.grid_wrapper .grid_item {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+  transition: 0.4s transform ease-in-out;
+  perspective: 1000px;
 }
 
-.grid_wrapper > *::before {
+.grid_wrapper .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   content: '';
   transform: translateY(100%);
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(transparent, rgba(0, 0, 0));
   width: 100%;
   height: 100%;
   transition: 0.4s transform ease-in-out;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 4px;
 }
 
-.grid_wrapper > *:hover::before {
-  transform: translateY(0);
+.grid_wrapper .grid_item:hover .overlay {
+  transform: translateY(0) rotateY(-180deg);
+}
+
+.grid_wrapper .grid_item:hover {
+  transform: rotateY(180deg);
 }
 
 .item1 {
